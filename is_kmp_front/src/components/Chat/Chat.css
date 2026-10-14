@@ -1,0 +1,42 @@
+.chatContainer {
+    width: 248px;
+}
+
+.chatDivider {
+    margin: 0;
+    border-width: 2px;
+}
+
+.chatInnerContainer {
+    position: relative;
+    padding: 10px;
+    cursor: pointer;
+    min-height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.chatName {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.chatLastMessageDate {
+    position: absolute;
+    top: -4px;
+    right: -2px;
+    color: #4c4c4c;
+}
+
+.chatLastMessage {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

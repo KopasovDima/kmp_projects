@@ -1,0 +1,28 @@
+.settings {
+    width: 400px;
+    height: 100%;
+    margin: 0 auto;
+    place-content: center;
+    place-items: center;
+}
+
+.settingsNotificationRow {
+    width: 100%;
+    margin: 10px;
+}
+
+.settingsNotificationName {
+    font-weight: bold;
+}
+
+.settingsNotificationSwitch {
+    align-self: center;
+}
+
+.settingsSpinContainer {
+    height: 200px;
+    width: 100%;
+    place-items: center;
+    display: flex;
+    justify-content: center;
+}

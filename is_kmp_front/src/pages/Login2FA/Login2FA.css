@@ -1,0 +1,19 @@
+.login2FAPage {
+    width: 100vw;
+    height: calc(100vh - 70px);
+    margin: auto;
+    place-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.login2FAContainer {
+    width: 400px;
+    place-self: center;
+}
+
+.ant-otp-input {
+    font-weight: bold;
+}

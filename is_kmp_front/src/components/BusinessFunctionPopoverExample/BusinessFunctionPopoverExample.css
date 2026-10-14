@@ -1,0 +1,35 @@
+.bfPopoverContainer {
+    padding-bottom: 4px;
+    max-height: 600px;
+}
+
+.bfPopoverSelect {
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 100%;
+}
+
+.bfPopoverTextArea {
+    scrollbar-width: thin;
+}
+
+.bfPopoverDisplayValue {
+    padding-left: 10px;
+    padding-right: 10px;
+    max-height: 550px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+}
+
+.bfPopoverTitle {
+    padding-left: 12px;
+    padding-top: 12px;
+    font-size: 12px;
+    justify-content: center;
+    display: flex;
+}
+
+.bfPopoverText {
+    cursor: pointer;
+    text-decoration: underline;
+}

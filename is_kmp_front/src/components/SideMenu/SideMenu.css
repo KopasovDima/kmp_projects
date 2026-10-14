@@ -1,0 +1,15 @@
+.siderContainer {
+    overflow: auto;
+    inset-inline-start: 0;
+    top: 0;
+    bottom: 0;
+    scrollbar-width: thin;
+    scrollbar-gutter: stable;
+    scroll-margin-left: 10px;
+    position: absolute;
+    margin-top: 70px;
+    margin-bottom: 48px;
+    align-items: center;
+    overflow-x: hidden;
+    z-index: 1000;
+}

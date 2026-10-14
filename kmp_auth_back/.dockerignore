@@ -1,0 +1,15 @@
+.git
+.idea
+.venv
+**/__pycache__
+Dockerfile
+docker-compose.yaml
+rebuild_docker.sh
+rebuild_docker_without_db.sh
+.env.example
+README.md
+logs
+media
+static
+.dockerignore
+.gitignore

@@ -1,0 +1,15 @@
+.venv
+
+.idea
+
+static
+media
+temp_files
+
+.env
+
+logs
+
+**/__pycache__/**
+
+.gigaide

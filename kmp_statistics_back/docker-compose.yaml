@@ -1,0 +1,19 @@
+services:
+  kmp_statistics_django:
+    container_name: kmp_statistics_django
+    restart: unless-stopped
+    build: .
+    ports:
+      - 10000:10000
+    volumes:
+      - /var/apps/kmp_statistics/kmp_statistics_back/static/:/opt/app/static/
+      - /var/apps/kmp_statistics/kmp_statistics_back/logs/:/opt/app/logs/
+    networks:
+      kmp_docker_network:
+        ipv4_address: 172.30.0.5
+
+
+networks:
+  kmp_docker_network:
+    external: true
+    name: kmp_docker_network

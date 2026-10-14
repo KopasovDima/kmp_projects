@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Напоминание о непрочитанных сообщениях</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .content {
+            background-color: #f9f9f9;
+            padding: 25px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .button {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #007bff;
+            color: #ffffff !important;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            margin: 15px 0;
+        }
+    </style>
+</head>
+<body>
+<div class="content">
+    <h2>Напоминание о непрочитанных сообщениях</h2>
+    <p>Имеются непрочитанные сообщения в следующих чатах:</p>
+
+    <ul>
+        {% for chat in unread_chats %}
+        <li>
+            {{ chat.chat_name }}
+            {% if chat.is_group %}
+            (групповой чат)
+            {% endif %}
+            :
+            сообщений - {{ chat.unread_messages }}
+        </li>
+        {% endfor %}
+    </ul>
+
+    <div style="text-align: center;">
+        <a href="http://iskmp/messages" class="button">Перейти к чатам</a>
+    </div>
+</div>
+</body>
+</html>

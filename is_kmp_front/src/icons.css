@@ -1,0 +1,39 @@
+.iconMedium {
+    font-size: 18px;
+}
+
+.iconPersonalChat {
+    font-size: 12px;
+    color: #0f1b99;
+}
+
+.iconSendButton {
+    font-size: 20px;
+    color: #0f1b99;
+}
+
+.iconEmoji {
+    font-size: 20px;
+    color: #5e5e5e;
+
+    :hover {
+        color: #0f1b99;
+    }
+}
+
+.iconEmojiActive {
+    font-size: 20px;
+    color: #0f1b99;
+}
+
+.iconSideMenuOffers {
+    font-size: 30px !important;
+    margin-left: -5px !important;
+    margin-top: 5px !important;
+}
+
+.iconSideMenuOrders {
+    font-size: 25px !important;
+    margin-left: -2px !important;
+    margin-top: 8px !important;
+}

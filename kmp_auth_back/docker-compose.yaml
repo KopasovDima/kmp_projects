@@ -1,0 +1,64 @@
+services:
+  postgres_kmp_auth_db:
+    image: postgres:latest
+    container_name: postgres_kmp_auth_db
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      POSTGRES_USER: ${PSQL_USER}
+      POSTGRES_PASSWORD: ${PSQL_PWD}
+      POSTGRES_DB: ${PSQL_DB_NAME}
+    ports:
+      - 50002:5432
+    volumes:
+      - postgres_kmp_auth_data:/var/lib/postgresql/data
+    networks:
+      kmp_docker_network:
+        ipv4_address: 172.30.1.2
+
+  kmp_auth_back:
+    container_name: kmp_auth_back
+    restart: unless-stopped
+    build: .
+    ports:
+      - 20001:20001
+    volumes:
+      - kmp_auth_static:/opt/app/static/
+      - kmp_auth_media:/opt/app/media/
+      - kmp_auth_logs:/opt/app/logs/
+    networks:
+      kmp_docker_network:
+        ipv4_address: 172.30.0.2
+
+
+volumes:
+  postgres_kmp_auth_data:
+    driver: local
+    driver_opts:
+      type: none
+      device: '/var/docker-volumes/postgres-kmp-auth'
+      o: bind
+  kmp_auth_static:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: '/var/apps/kmp_auth/kmp_auth_back/static/'
+  kmp_auth_media:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: '/var/apps/kmp_auth/kmp_auth_back/media/'
+  kmp_auth_logs:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: '/var/apps/kmp_auth/kmp_auth_back/logs/'
+
+networks:
+  kmp_docker_network:
+    external: true
+    name: kmp_docker_network

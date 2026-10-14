@@ -1,0 +1,4 @@
+export const AUTH_TOKEN_KEY = 'AUTH_TOKEN_KEY'
+export const REFRESH_TOKEN_KEY = 'REFRESH_TOKEN_KEY'
+export const _2FA_TOKEN_KEY = '2FA_TOKEN_KEY'
+export const CHECK_TOKEN_EXPIRED_INTERVAL_MS = 2 * 60 * 1000 // 2 Minutes

@@ -1,0 +1,25 @@
+services:
+  kmp_notifications:
+    container_name: kmp_notifications
+    restart: unless-stopped
+    build: .
+    ports:
+      - 30000:30000
+    volumes:
+      - kmp_notifications_logs:/opt/app/logs/
+    networks:
+      kmp_docker_network:
+        ipv4_address: 172.30.0.4
+
+networks:
+  kmp_docker_network:
+    external: true
+    name: kmp_docker_network
+
+volumes:
+  kmp_notifications_logs:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: /var/apps/kmp_notifications/logs/

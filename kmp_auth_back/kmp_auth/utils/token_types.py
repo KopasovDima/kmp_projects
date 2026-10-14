@@ -1,0 +1,4 @@
+ACCESS_TOKEN_TYPE = 'access'
+REFRESH_TOKEN_TYPE = 'refresh'
+RESET_PASSWORD_TOKEN_TYPE = 'reset_password'
+EMAIL_2FA_TOKEN_TYPE = '2fa'

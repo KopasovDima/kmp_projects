@@ -1,0 +1,30 @@
+.purchasesPage {
+    padding: 20px;
+    position: relative;
+}
+
+.purchasesYearSelectContainer {
+    margin-left: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.purchasesYearSelect {
+    margin-left: 10px;
+    width: 90px;
+}
+
+.purchasesFullTableSwitchContainer {
+    position: absolute;
+    top: 22px;
+    cursor: pointer;
+    width: 120px;
+}
+
+.purchasesFullTableSwitchTitle {
+    line-height: 0.9
+}
+
+.purchasesFullTableSwitch {
+    align-self: center;
+}

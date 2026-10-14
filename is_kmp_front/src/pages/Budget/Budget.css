@@ -1,0 +1,34 @@
+.budgetPage {
+    padding: 20px;
+}
+
+.ant-table-body {
+    scrollbar-width: thin;
+    /*scrollbar-color: #f40b0b transparent;*/
+    scrollbar-gutter: stable;
+}
+
+.editable-cell {
+    position: relative;
+}
+
+.editable-cell-value-wrap {
+    text-align: center;
+    text-decoration: underline;
+}
+
+.editable-row:hover {
+    border-radius: 6px;
+}
+
+.selectPopup {
+    max-width: 50vw;
+}
+
+th {
+    user-select: none;
+}
+
+.boldRightBorder {
+    border-right: 2px solid #a6a6a6 !important;
+}

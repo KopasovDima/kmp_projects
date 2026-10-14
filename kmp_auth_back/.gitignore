@@ -1,0 +1,16 @@
+.venv
+
+.idea
+
+static
+
+.env
+db.sqlite3
+users.json
+departments.json
+
+logs
+temp
+media
+
+**/__pycache__/**

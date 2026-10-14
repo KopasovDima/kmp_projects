@@ -1,0 +1,10 @@
+Dockerfile
+.dockerignore
+docker-compose.yml
+docker-compose*.yml
+.git
+.gitignore
+README.md
+logs
+.env.example
+rebuild_docker.sh

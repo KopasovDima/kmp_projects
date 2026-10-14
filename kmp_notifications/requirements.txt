@@ -1,0 +1,5 @@
+fastapi==0.115.12
+fastapi-cli==0.0.7
+pydantic-settings==2.9.1
+Jinja2==3.1.6
+aiosmtplib==4.0.1

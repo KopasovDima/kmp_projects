@@ -1,0 +1,114 @@
+@import url('./font.css');
+
+#root {
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  width: 100vw;
+  height: 100vh;
+  font-size: 14px;
+}
+
+body {
+  font-family: 'KMP_Sirius', Verdana, sans-serif !important;
+  margin: 0;
+  display: flex;
+  flex: 1;
+}
+
+h1 {
+  font-size: 2.82rem;
+  margin: .67rem 0;
+}
+
+h2 {
+  font-size: 2.12rem;
+  margin: .75rem 0;
+}
+
+h3 {
+  font-size: 1.65rem;
+  margin: .83rem 0;
+}
+
+h4 {
+  font-size: 1.35rem;
+  margin: .83rem 0;
+}
+
+h5 {
+  font-size: 1.17rem;
+  margin: 1.5rem 0;
+}
+
+h6 {
+  font-size: 1.05rem;
+  margin: 1.67rem 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bolder
+}
+
+p, a, span, th {
+  font-size: 12px;
+  margin: 2px;
+  outline: none !important;
+}
+
+.ant-modal-title {
+  user-select: none;
+}
+
+.modalInputElement {
+  margin-top: 15px;
+  /*user-select: none;*/
+  margin-bottom: 15px;
+}
+
+li {
+  outline: none !important;
+}
+
+.ant-notification-notice {
+  padding: 12px !important;
+}
+
+.ant-notification-notice-message {
+  font-size: 16px !important;
+  margin-right: 10px !important;
+}
+
+.ant-notification-notice-icon {
+  font-size: 18px !important;
+}
+
+.ant-notification-notice-description {
+  font-size: 14px !important;
+  margin-right: 20px !important;
+}
+
+.ant-notification-notice-close {
+  top: 10px !important;
+  inset-inline-end: 10px !important;
+}
+
+pre {
+  font-size: 12px;
+  font-family: inherit;
+  margin: 2px;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  /*line-break: anywhere;*/
+  word-wrap: normal;
+}
+
+.ant-popover-inner {
+  padding: 0 !important;
+}

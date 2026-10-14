@@ -1,0 +1,12 @@
+.venv
+
+.idea
+
+.env
+logs
+**/__pycache__/**
+source_csv
+generated
+users.json
+vp_temp_files
+processed_call_statistics_files.json

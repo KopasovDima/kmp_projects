@@ -1,0 +1,22 @@
+.userPhotoContainer {
+    margin: 5px;
+    height: 40px;
+    width: 40px;
+    background-color: #cee3f6;
+    border-radius: 20px;
+    align-self: center;
+    font-size: 20px;
+    display: flex;
+    place-content: center;
+    outline: rgb(120, 120, 120) solid 1px;
+}
+
+.userPhotoContainerHoverable:hover {
+    opacity: 0.75;
+}
+
+.userPhoto {
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+}

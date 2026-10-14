@@ -1,0 +1,10 @@
+.tableContainer {
+    margin-top: 10px;
+    height: calc(100vh - 235px);
+    width: calc(100vw - 100px);
+}
+
+.tableDeleteRowIcon {
+    color: #df3030;
+    font-size: 10px;
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Напоминание о мероприятии</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .content {
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+        .button {
+            display: inline-block;
+            padding: 8px;
+            background-color: #007bff;
+            color: #ffffff !important;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            margin: 15px 0;
+        }
+    </style>
+</head>
+<body>
+<div class="content">
+        <table align="center" border="0" cellpadding="0" cellspacing="0" width="600" style="margin: 30px auto; alignSelf: center; background-color: #ffffff;">
+        <tr>
+            <td style="padding: 30px; background-color: #f8f8f8;">
+                <p style="font-size: 16px;">{{ user_name }}, напоминаем о проведении мероприятия:</p>
+
+                <h2 style="color: #4a6fa5;">{{ event_name }}</h2>
+
+                {% if event_description %}
+                <p>{{ event_description }}</p>
+                {% endif %}
+
+                <table style="margin: 25px 0; background-color: #f9f9f9; border-left: 4px solid #4a6fa5; padding: 15px;">
+                    <tr>
+                        <td style="padding-right: 15px; font-weight: bold;">Дата:</td>
+                        <td>{{ start_date_string }}</td>
+                    </tr>
+                    <tr>
+                        <td style="padding-right: 15px; font-weight: bold;">Время:</td>
+                        <td>{{ start_time_string }}</td>
+                    </tr>
+                </table>
+
+                {% if link %}
+                <table border="0" cellpadding="0" cellspacing="0" style="margin: 30px auto;">
+                    <tr>
+                        <td align="center" bgcolor="#4a6fa5" class="button">
+                            <a href="{{ link }}" target="_blank" style="font-size: 16px; color: #ffffff; text-decoration: none; padding: 12px 30px; display: inline-block; border-radius: 4px;">
+                                Подключиться к ВКС
+                            </a>
+                        </td>
+                    </tr>
+                </table>
+                {% endif %}
+            </td>
+        </tr>
+
+        {% if link %}
+        <tr>
+            <td style="background-color: #eeeeee; text-align: center; font-size: 12px; color: #666666;">
+                <p>Если кнопка не работает, скопируйте ссылку ниже:<br>
+                <span style="color: #4a6fa5;">{{ link }}</span></p>
+            </td>
+        </tr>
+        {% endif %}
+    </table>
+</div>
+</body>
+</html>

@@ -1,0 +1,61 @@
+.businessFunctionsPage {
+    padding: 10px 5px 0 20px;
+}
+
+.businessFunctionsSpinnerContainer {
+    height: calc(100vh - 110px);
+    width: calc(100vw - 100px);
+    place-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.businessFunctionsTreeContainer {
+    height: calc(100vh - 110px);
+    overflow-y: auto;
+    scrollbar-width: thin;
+}
+
+.businessFunctionsTreeSearchInput {
+    margin: auto auto 8px;
+    width: 100%;
+}
+
+.businessFunctionsDetailsContainer {
+    height: calc(100vh - 110px);
+    margin-left: 10px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+}
+
+.businessFunctionsDetailsSpinnerContainer {
+    height: calc(100vh - 110px);
+    place-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.businessFunctionsTreeItem {
+    user-select: none;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+}
+
+.businessFunctionsTreeItemActionButton {
+    opacity: 0;
+    margin-left: 8px;
+}
+
+.ant-tree-treenode:hover .businessFunctionsTreeItemActionButton {
+    opacity: 1;
+}
+
+.ant-tree-treenode {
+    margin-bottom: 0 !important;
+    line-height: 20px !important;
+}
+
+.businessFunctionsTreeSearchedValue {
+    color: #f50;
+}

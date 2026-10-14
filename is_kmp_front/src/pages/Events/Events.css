@@ -1,0 +1,25 @@
+.eventsPage {
+    padding: 20px;
+}
+
+.participantContainer {
+    display: flex;
+    align-items: center;
+}
+
+.participantButton {
+    display: none;
+}
+
+.participantContainer:hover .participantButton {
+    display: flex;
+}
+
+.ant-dropdown-menu-item {
+    padding: 4px !important;
+    margin: 2px !important;
+}
+
+.notificationsDropdown:hover {
+    background-color: rgba(0, 0, 0, 0.04) !important;
+}

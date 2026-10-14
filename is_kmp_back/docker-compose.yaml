@@ -1,0 +1,64 @@
+services:
+  postgres_is_kmp_db:
+    image: postgres:latest
+    container_name: postgres_is_kmp_db
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      POSTGRES_USER: ${PSQL_USER}
+      POSTGRES_PASSWORD: ${PSQL_PWD}
+      POSTGRES_DB: ${PSQL_DB_NAME}
+    ports:
+      - 50001:5432
+    volumes:
+      - postgres_is_kmp_data:/var/lib/postgresql/data
+    networks:
+      kmp_docker_network:
+        ipv4_address: 172.30.1.3
+
+  is_kmp_back:
+    container_name: is_kmp_back
+    restart: unless-stopped
+    build: .
+    ports:
+      - 10501:10501
+    volumes:
+      - is_kmp_static:/opt/app/static/
+      - is_kmp_media:/opt/app/media/
+      - is_kmp_logs:/opt/app/logs/
+      - ./.env:/opt/app/.env
+    networks:
+      kmp_docker_network:
+        ipv4_address: 172.30.0.3
+
+volumes:
+  postgres_is_kmp_data:
+    driver: local
+    driver_opts:
+      type: none
+      device: '/var/docker-volumes/postgres-is-kmp'
+      o: bind
+  is_kmp_static:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: '/var/apps/is_kmp/is_kmp_back/static/'
+  is_kmp_media:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: '/var/apps/is_kmp/is_kmp_back/media/'
+  is_kmp_logs:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: '/var/apps/is_kmp/is_kmp_back/logs/'
+
+networks:
+  kmp_docker_network:
+    external: true
+    name: kmp_docker_network

@@ -1,0 +1,67 @@
+.userProfile {
+    width: 500px;
+    height: 100%;
+    margin: 0 auto;
+    place-content: center;
+    place-items: center;
+}
+
+.userProfilePhotoContainer {
+    height: 150px;
+    width: 150px;
+    place-content: center;
+    display: flex;
+    border-radius: 75px;
+    align-self: center;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    outline: rgb(120, 120, 120) solid 2px;
+    position: relative;
+    background-color: #cee3f6;
+}
+
+.userProfilePhotoInput {
+    display: none;
+}
+
+.userProfilePhoto {
+    height: 150px;
+    width: 150px;
+    border-radius: 75px;
+}
+
+.userProfilePhotoPlaceholder {
+    font-size: 80px;
+}
+
+.userProfilePhotoUpdateContainer {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    align-self: center;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+}
+
+.userProfilePhotoUpdate {
+    font-size: 60px;
+}
+
+.userProfilePropertyContainer {
+    width: 100%;
+    margin: 10px;
+}
+
+.userProfilePropertyTitle {
+    font-weight: bold;
+}
+
+.userProfilePropertyValue {
+    place-content: center;
+    text-align: right;
+    max-width: 400px
+}

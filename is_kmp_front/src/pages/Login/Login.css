@@ -1,0 +1,15 @@
+.loginPage {
+    width: 100vw;
+    height: calc(100vh - 70px);
+    margin: auto;
+    place-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.loginContainer {
+    width: 300px;
+    place-self: center;
+}
